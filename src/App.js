@@ -1,9 +1,10 @@
 import './App.css';
+import Body from './components/Body';
 
 function App() {
   return (
-    <div className="text-3xl font-serif text-clip text-yellow-300">
-      Namaste Every one
+    <div>
+      <Body />
     </div>
   );
 }
