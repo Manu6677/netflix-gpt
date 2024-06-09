@@ -10,3 +10,4 @@ export const OPTIONS_API = {
   }
 };
 
+export const YOUTUBE_VIDEO = `https://www.youtube.com/watch?v={movieId}`;

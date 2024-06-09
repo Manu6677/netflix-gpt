@@ -11,7 +11,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
-  console.log(user);
+  // console.log(user);
 
   const handleSignOut = () => {
     console.log('signout');
@@ -27,10 +27,10 @@ const Header = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log(user);
+      // console.log(user);
       if (user) {
-        console.log('Body Page');
-        console.log(user);
+        // console.log('Body Page');
+        // console.log(user);
         const { uid, email, displayName, photoURL } = user;
         dispatch(addUser({ uid: uid, displayName: displayName, email: email, photoURL: photoURL, }));
         navigate("/browse")
@@ -45,7 +45,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute w-screen bg-gradient-to-b from-black py-3 z-30 flex justify-between">
+    <div className="absolute w-screen bg-gradient-to-b from-black py-3 z-30 flex justify-between overflow-x-hidden">
       <img
         className="w-44"
         src= {LOGO_NETFLIX}
